@@ -6,7 +6,7 @@ int choix = 1;
 
 struct Lieux {
 	char nom[10];
-	char description[20];
+	char description[50];
 	int difficulte;
 	int id[20];
 };	
@@ -50,13 +50,36 @@ int deplacement(lieu lieu1,lieu lieu2,lieu lieu3) {
 	}
 };
 
+
+int deplacement (choix){
+	
+		printf ("%s", lieux[choix].description);
+		printf ("Vous etes arrives a/au %s\n",lieux.nom);
+		printf ("voulez vous aller au %s ou au %s ?\n",lieux.id);
+		scanf ("%d",lieu[choix].id);
+		choix = 0;
+
+
+
 int main() {
+	
+}
 
 
-lieu lieu1 ={"enfer", "il fait chaud\n" , 19 , {1,2}};
-lieu lieu2 ={"paradis", "c'est plutot cool\n" , 3 , {1,2}};
-lieu lieu3 ={"terre", "bien et pas bien\n" , 10 , {1,2}};
-deplacement(lieu1,lieu2,lieu3);
+
+
+lieu lieux [10] = {"enfer", "il fait chaud\n" , 19 , {6,7},
+"paradis", "c'est plutot cool\n" , 3 , {4,5},
+"terre", "bien et pas bien\n" , 10 , {8,9},
+"styx","c'est mouillé\n",17,{1,2},
+"tartare","il fait encore plus chaud\n",16,{1,1},
+"Pantheon","c'est beau\n",5,{1,5},
+"Nuage","c'est haut\n",4,{1,8},
+"Toulouse","c'est rose\n",9,{1,9},
+"Renne","c'est rigolo\n",1,{1,4}};
+
+
+deplacement(lieux);
 
 
 
